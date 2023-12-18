@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.blissroms.updater"
+    package="com.blissos.updater"
     android:versionCode="1">
 
     <uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM" />
@@ -23,7 +23,7 @@
         android:usesCleartextTraffic="false">
 
         <activity
-            android:name="com.blissroms.updater.UpdatesActivity"
+            android:name="com.blissos.updater.UpdatesActivity"
             android:excludeFromRecents="true"
             android:label="@string/display_name"
             android:theme="@style/AppTheme.NoActionBar"
@@ -40,16 +40,16 @@
             </intent-filter>
         </activity>
 
-        <service android:name="com.blissroms.updater.controller.UpdaterService" />
-        <service android:name="com.blissroms.updater.ExportUpdateService" />
+        <service android:name="com.blissos.updater.controller.UpdaterService" />
+        <service android:name="com.blissos.updater.ExportUpdateService" />
 
-        <receiver android:name="com.blissroms.updater.UpdaterReceiver" android:exported="false">
+        <receiver android:name="com.blissos.updater.UpdaterReceiver" android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.blissroms.updater.UpdatesCheckReceiver">
+        <receiver android:name="com.blissos.updater.UpdatesCheckReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
